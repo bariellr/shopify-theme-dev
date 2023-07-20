@@ -1,0 +1,23 @@
+<div class="container px-4 mx-auto">
+  <ul class="items-center hidden gap-4 md:flex">
+    {% for link in linklists.footer.links %}
+      <li>
+        <a href="{{ link.url }}">
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.footer.settings.paragraph"
+    }
+  ]
+}
+{% endschema %}

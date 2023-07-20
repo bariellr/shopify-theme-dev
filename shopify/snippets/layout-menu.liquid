@@ -1,0 +1,39 @@
+<ul class="items-center hidden gap-4 md:flex">
+  {% for link in linklists['main-menu'].links %}
+    <li>
+      <a href="{{ link.url }}">
+        {{ link.title | escape }}
+      </a>
+
+      {% if link.levels >= 1 %}
+        <ul>
+          {% for sub_link in link.links %}
+            <a href="{{ sub_link.url }}">
+              {{ sub_link.title | escape }}
+            </a>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+
+  {% if shop.customer_accounts_enabled %}
+    {% if customer %}
+      <li>
+        <a href="{{ routes.account_url }}">
+          {{ 'action.account' | t }}
+        </a>
+      </li>
+      <li>{{ 'action.log_out' | t | customer_logout_link }}</li>
+    {% else %}
+      <li>{{ 'action.log_in' | t | customer_login_link }}</li>
+      <li>{{ 'action.register' | t | customer_register_link }}</li>
+    {% endif %}
+  {% endif %}
+
+  <li>
+    <a href="{{ routes.cart_url }}">
+      {{ 'action.cart' | t }}
+    </a>
+  </li>
+</ul>

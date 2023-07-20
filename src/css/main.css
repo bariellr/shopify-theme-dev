@@ -1,0 +1,25 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+/* 
+    HEADER
+*/
+#shopify-section-header {
+    @apply py-6 text-white bg-slate-900;
+}
+
+/* 
+    MAIN
+*/
+#main {
+    @apply min-h-screen text-white bg-slate-700;
+}
+
+/* 
+    FOOTER
+*/
+#shopify-section-footer {
+    @apply py-6 text-white bg-slate-900;
+}

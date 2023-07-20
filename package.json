@@ -1,0 +1,25 @@
+{
+    "name": "shopify-theme-dev",
+    "version": "1.0.0",
+    "description": "Dev environment for building custom Shopify themes.",
+    "scripts": {
+        "mix:build": "npx mix --production",
+        "mix:watch": "npx mix watch",
+        "shopify:dev": "shopify theme dev --path ./shopify",
+        "shopify:push": "shopify theme push --path ./shopify",
+        "shopify:pull": "shopify theme pull --path ./shopify",
+        "shopify:lint": "shopify theme check --path ./shopify"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "laravel-mix": "^6.0.49",
+        "laravel-mix-tailwind": "^0.1.2",
+        "npm-run-all": "^4.1.5",
+        "tailwindcss": "^3.3.3"
+    },
+    "dependencies": {
+        "alpinejs": "^3.12.3"
+    }
+}
